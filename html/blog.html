@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+            color:white;
+        }
+        body {
+            height: 100%;
+            background-color: black;
+            margin: 0px;
+            padding: 0px; 
+            font-size: xx-large;
+            font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+        }
+
+        header {
+            
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+        }
+
+        header .navbar {
+            display: flex;
+            align-items: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            justify-content: space-between;
+            background-color:black;
+        }
+
+        .navbar .logo {
+            margin-left: 20px;
+        }
+
+        .navbar .menu-links {
+            display: flex;
+            gap: 60px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: gold;
+        }
+        .hero-section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-top: 0px;
+            
+        }
+
+        .hero-section .content {
+            color: #fff;
+            max-width: 1200px;
+            width: 100%;
+            
+        }
+
+        .hero-section .content h1 {
+            font-size: 2.5rem; 
+            max-width: 600px;
+            margin-left:100px;
+        }
+
+        .hero-section .content p {
+            font-weight: 300;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left:100px;
+        }
+
+        .hero-section .content button {
+            background: #fff;
+            color: black; 
+            outline: none;
+            border: none;
+            font-size: 30px;
+            font-weight: 500;
+            margin-top: 40px;
+            padding: 12px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left:100px;
+        }
+
+        .hero-section .content button:hover {
+            color: #fff;
+            background: gold;
+        }
+
+
+        .blog-post {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .image-container-1 {
+            flex: 1;
+            margin-left: 80px;
+            margin-top: 100px;
+
+        }
+
+        .image-container-2 {
+            flex: 1;
+            margin-left: 80px;
+            margin-top: 200px;
+
+        }
+        .image-container-3 {
+            flex: 1;
+            margin-left: 80px;
+            margin-top: 230px;
+        }
+
+        .image-container-4 {
+            flex: 1;
+            margin-left: 80px;
+            margin-top: 230px;
+        }
+
+        .image-container-5 {
+            flex: 1;
+            margin-left: 80px;
+            margin-top: 60px;
+        }
+
+        .text-container {
+            flex: 1;
+            margin-left: 40px; 
+            margin-right: 20px;
+            align-content: center;
+            color: white;
+
+        }
+        .text-container-1{
+            flex: 1;
+            margin-left: 40px; 
+            margin-right: 20px;
+            margin-top: 40px;
+            align-content: center;
+            color: white;
+        }
+
+        .text-container h2{
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            text-align: center;
+            font-size: medium;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .footer-section .logo{
+            margin-left:100px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer-section a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-section hr{
+            width: 50%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo"><img src="../images/inktechlogo.jpg" alt="InkTech Logo"></a>
+            <ul class="menu-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="canon.html">Product</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+
+    <h1>Technology</h1>
+    
+    <div class="blog-post">
+        <div class="flex-container">
+            <div class="image-container-1">
+                <img src="../images/Tech.original.png" height="400px" width="auto" alt="Image">
+            </div>
+            <div class="text-container-1">
+                <p>For millions and millions of years, our earth has continuously evolved to sustain life. But it is in the last hundred years that this evolution has attained unprecedented levels. This has been solely made possible by technology, formally defined as – “the application of scientific knowledge for practical usage”. From our houses to outer space, technology has played a major role on several levels in our day to day lives. It has helped us to gain more information about our surroundings and make best use of the resources provided by the earth. With the recent breakthrough of artificial intelligence, it is incredibly exciting to witness the next generation of technology and how it will impact our society.</p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Positive Impacts</h2>
+                <p>
+                    <b>1. Easier access to information:</b> With just a few clicks, one is able to access almost any desired data on the internet. The internet has truly become the primary medium to acquire information. <br>
+                    <b>2. Improved healthcare:</b> Modern technology has helped to save countless lives with advancements in medicine production, medical equipments and research. <br>
+                    <b>3. Transportation:</b> Advancements in technology has enabled humans to go from point A to point B with ease, despite the distance between the points. Traveling to the other side of the solar system – let alone the world – is now feasible with the vehicles engineered with fascinating technology. <br>
+                    <b>4. Communication:</b> Gone are the days when we had to write letters to reach a person who is at a distant place. With the introduction of telephones and the internet, we can communicate with anybody we desire, no matter how far they are.
+                </p>
+            </div>
+            <div class="image-container-2">
+                <img src="../images/positive.jpeg.avif" height="400px" width="auto" alt="Image">
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="image-container-3">
+                <img src="../images/what-makes-tech-evil-january-23-2020.jpg.webp" height="400px" width="auto" alt="Image">
+            </div>
+            <div class="text-container">
+                <h2>Negative Impacts</h2>
+                <p> Although we have been mostly been aided by it, technology also has a few negative impacts on our society and the world in general. <br><br>
+                    <b>1. Health Concerns:</b> Since communication and services have been made more accessible, many people forget to take a reality check. As a result, they are out of touch with the real world and lack social interaction. This not only raises concerns for a person’s physical but also mental health. <br>
+                    <b>2. Pollution:</b> Due to the factories and big vehicles, there is an increase in the rate of pollution around the world. This is also one of the main reasons for global warming. Although it is high time to follow sustainable practices, until and unless something isn’t done on a large scale – pollution will be hard to fight against in the future.<br>
+                    <b>3. Cybercrimes:</b> The act of committing crimes over the web has boomed with the revolution of the internet. More than ever, we are at a constant risk of being digitally attacked.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Impact of technology on daily life and business</h2>
+                <p>From the tiny computers in our pockets – to the vehicles we travel in, our life has been made incredibly smoother with the help of these tools. For businesses, automation and machinery have contributed to the efficiency and precision of repetitive tasks that saves both time as well as labor costs. In addition to this, the communication, marketing strategies and sales of any business have vastly benefitted from the application of modern technology. <br><br>
+
+                    Modern technology has revolutionized the capabilities and features of today’s printers. The printing speeds, quality and efficiency has been greatly improved as compared to previous generations. Not only this, with the introduction of IOT, we are now able to print pages over the internet on any of our mobile devices. 
+                </p>
+            </div>
+            <div class="image-container-4">
+                <img src="../images/positiveimg.jpg.tiff" height="400px" width="auto" alt="Image">
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="image-container-5">
+                <img src="../images/technology-customer-support1.jpg" height="500px" width="auto" alt="Image">
+            </div>
+            <div class="text-container">
+                <h2>Overall conclusion</h2>
+                <p>As time goes on, technology will inevitably continue to improve vastly. It has helped shape our society by revolutionizing the services and goods that are crucial in our lives. It is also very important to consider the challenges that are caused by overuse or misuse of technology – which if not addressed, will pose a major threat to our world. By taking thoughtful and precise decisions, it is our responsibility to make sure that the development of technology is used for positive impacts for the world.
+                </p>
+            </div>
+        </div>
+
+       
+    </div>
+    <br>
+    <br>
+    <br>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo">
+                <br>
+                <br>
+                <br>
+                <img src="../images/inktechlogofooter.png" >
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <hr>
+                <ul>
+                    <li><a href="ronik.html">Home</a></li>
+                    <li><a href="canon.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section brands">
+                <h3>Partner brands</h3>
+                <hr>
+                <a href="canon.html"><p>Canon</p></a>
+                <a href="hp.html"><p>HP</p></a>
+                <a href="epson.html"><p>Epson</p></a>
+                <a href="brother.html"><p>Brother</p></a>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <hr>
+                <p>123 Printer Street, Inkland</p>
+                <p>+977 986203999</p>
+                <p>info@inktech.com</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" height="30px" width="auto"></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="../images/instagram.png" height="30px" width="auto"></a>  
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="../images/twitter.png" height="30px" width="auto"></a> 
+                <a href="https://www.whatsapp.com" target="_blank"><img src="../images/whatsapp.png" height="30px" width="auto"></a>
+
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>

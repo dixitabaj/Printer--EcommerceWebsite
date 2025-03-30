@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About us</title>
+        <title>form with border</title>
+    
+         
+        <style>
+            body {
+                height: 100%;
+                background-color: black;
+                margin: 0px;
+                padding: 0px; 
+                font-size: xx-large;
+                font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+            }
+
+            h1{
+                color:white;
+            }
+            header {
+                
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+            }
+
+            header .navbar {
+                display: flex;
+                align-items: center;
+                max-width: 1500px;
+                margin: 0 auto;
+                justify-content: space-between;
+                background-color:black;
+            }
+
+            .navbar .logo {
+                margin-left: 20px;
+            }
+
+            .navbar .menu-links {
+                display: flex;
+                gap: 60px;
+            }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+                transition: 0.3s ease;
+            }
+
+            .navbar a:hover {
+                color: gold;
+            }
+
+            footer {
+                background-color: rgb(20, 20, 20);
+                color: white;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 20px;
+                text-align: center;
+                font-size: medium;
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 20px;
+            }
+
+            .footer-section {
+                flex: 1;
+                padding: 0 10px;
+            }
+
+            .footer-section .logo{
+                margin-left:100px;
+            }
+
+            .footer-section ul {
+                list-style: none;
+                padding: 0;
+                text-decoration: none;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 10px;
+                text-decoration: none;
+            }
+
+            .footer-section a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .footer-section hr{
+                width: 50%;
+            }
+
+
+
+            .about{
+                background-color: black;
+                display: flex;
+            }
+            .about img{
+                height: auto;
+                width: 420px;
+            }
+            .main{
+                width: 1130px;
+                max-width: 95%;
+                margin: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .about-text{
+                width: 550px;
+            }
+          
+            .about-text h1{
+                color: white;
+                font-size: 80px;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+            }
+            .about-text h5{
+                color: white;
+                font-size: 25px;
+                text-transform: capitalize;
+                margin-bottom: 25px;
+                letter-spacing: 2px;
+            }
+            span{
+                color: red;
+            }
+            .about-text p{
+                color: white;
+                letter-spacing: 1px;
+                line-height: 28px;
+                font-size: 18px;
+                margin-bottom: 45px;
+            }
+            .main {
+                color: white;
+                flex: 50%;
+            }
+            .main p{
+                font-size: x-large;
+            }
+            .main1{
+            color: white;
+            flex:50%;
+            margin-top: 30px;
+            }
+            .intro-text h2{
+                width: 200px;
+                justify-content: center;
+                font-size: 80px;
+                margin-bottom: 20px;
+                
+            }
+            button{
+                background: red;
+                color: white;
+                text-decoration:none;
+                border: 2px solid transparent;
+                font-weight: bold;
+                padding: 13px 30px;
+                border-radius: 30px;
+                transform: .4s;
+            }
+            button:hover{
+                background: transparent;
+                border: 2px solid red;
+                cursor: pointer;
+            }
+            form{
+                background-color: black;
+                font-size: x-large;
+                color: white;
+                text-align: center;
+                border: 2px solid;
+                padding: 20px;
+                width: 400px;
+                margin: auto;
+            }
+
+            
+            
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="home.html" class="logo"><img src="../images/inktechlogo.jpg" alt="InkTech Logo"></a>
+                <ul class="menu-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="canon.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+
+        <section class="about">
+            </div>
+            <div class="main">
+                <img src="../images/it.png"
+                height: auto;
+                width: 420px;>
+                <div class="about-text">
+                    
+                    <h3>We're here to <span>elevate</span> your printing experience</h3>
+                 <p>InkTech – where innovation meets your imagination. Explore our range of printers today and discover 
+                 the best printers from top four printer companies to make your search easier. At InkTech, we understand 
+                 your printer needs so we have included a range of printers that are cost-efficient with eco-friendly features, 
+                 promoting sustainability helping you save on both time and resources. </p>
+                 
+                </div>
+
+            </div>
+        </section>
+        <section class="intro">
+            <div>
+            <h1 class="title" style="color: white; text-align: center;">Meet our team</h1>
+            </div>
+        </section>
+        <section class="about">
+            <div class="main">
+                <img src="../images/umanga.png"
+                height="auto" 
+                width="420px" >
+            </div>
+            <div class="main1">
+                <p class="main_p1">Hello, I'm</p>
+                <h1 class="title">Umanga Amatya</h1>
+                <p class="main_p2">Web Developer</p>
+                <a href="umangacv.html">
+                <button type="button">Cirriculum Vitae</button>
+            </a>
+            </div>
+        </section>
+        <section>
+            <section class="about">
+                <div class="main">
+                    <img src="../images/dixita.png"
+                    height="auto" 
+                    width="420px" >
+                </div>
+                <div class="main1">
+                    <p class="main_p1">Hello, I'm</p>
+                    <h1 class="title">Dixita Bajracharya</h1>
+                    <p class="main_p2">Web Developer</p>
+                    <a href="dixitacv.html">
+                    <button type="button">Cirriculum Vitae</button>
+                </a>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section class="about">
+                <div class="main">
+                    
+                    <img src="../images/ronik.png"
+                    height="auto" 
+                    width="420px" >
+                </div>
+               
+                <div class="main1">
+                    <p class="main_p1">Hello, I'm</p>
+                    <h1 class="title">Ronik Ghale</h1>
+                    <p class="main_p2">Web Developer</p>
+                    <a href="ronikcv.html">
+                    <button type="button">Cirriculum Vitae</button>
+                </a>
+                </div>
+            
+            </section>
+        </section>
+        <section>
+            <section class="about">
+                <div class="main">
+                    <img src="../images/mary.png"
+                    height="auto" 
+                    width="420px" >
+                </div>
+                <div class="main1">
+                    <p class="main_p1">Hello, I'm</p>
+                    <h1 class="title">Dechen Lama</h1>
+                    <p class="main_p2">Web Developer</p>
+                    <a href="marycv.html">
+                    <button type="button">Cirriculum Vitae</button>
+                </a>
+                </div>
+            </section>
+        </section>
+
+
+        
+        <form name="messageForm" onsubmit="validateForm()">
+                <label>First Name: </label>
+                <input type="text" name="fname" placeholder="Enter your first name">
+                <br>
+                <br>
+        
+                <label>Last Name: </label>
+                <input type="text" name="lname" placeholder="Enter your last name">
+                <br>
+                <br>
+        
+                <label>Gender: </label>
+                <input type="radio" name="genderDetails" value="male"> Male
+                <input type="radio" name= "genderDetails" value="female"> Female
+                <br>
+                <br>
+        
+                <label>Message:</label>
+                    <br>
+                    <br>
+                <textarea rows="5" cols="25" name="message" placeholder="Enter your message"></textarea>
+                    <br>
+                    <br>
+                <button type="submit" style="font-size: large;">Submit</button>
+                </form>
+
+
+                <script>
+                    function validateForm(){
+                        var firstName=document.forms["messageForm"]["fname"].value;
+                        var lastName=document.forms["messageForm"]["lname"].value;
+                        var gender=document.forms["messageForm"]["genderDetails"].value;
+                        var message=document.forms["messageForm"]["message"].value;
+                        if(firstName=="" ||lastName==""||gender==""||message==""){
+                            alert("Please enter all the required details!");
+                        }
+                        else{
+                            alert("Thank you for your message! We will get back to you soon.");
+                        }
+                    }
+                    
+                </script>
+        </form>
+        
+    </body>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo">
+                <br>
+                <br>
+                <br>
+                <img src="../images/inktechlogofooter.png" >
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <hr>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="canon.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section brands">
+                <h3>Partner brands</h3>
+                <hr>
+                <a href="canon.html"><p>Canon</p></a>
+                <a href="hp.html"><p>HP</p></a>
+                <a href="epson.html"><p>Epson</p></a>
+                <a href="brother.html"><p>Brother</p></a>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <hr>
+                <p>123 Printer Street, Inkland</p>
+                <p>+977 986203999</p>
+                <p>info@inktech.com</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="Picture of Facebook Icon" height="30px" width="auto"></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="../images/instagram.png" height="30px" width="auto"></a>  
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="../images/twitter.png" height="30px" width="auto"></a> 
+                <a href="https://www.whatsapp.com" target="_blank"><img src="../images/whatsapp.png" height="30px" width="auto"></a>
+
+            </div>
+            
+        </div>
+    </footer>
+
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Website</title>
+    <style>
+        body {
+                height: 100%;
+                background-color: black;
+                margin: 0px;
+                padding: 0px; 
+                font-size: xx-large;
+                font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+            }
+
+        h1{
+            color:white;
+        }
+        header {
+            
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+        }
+
+        header .navbar {
+            display: flex;
+            align-items: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            justify-content: space-between;
+            background-color:black;
+        }
+
+        .navbar .logo {
+            margin-left: 20px;
+        }
+
+        .navbar .menu-links {
+            display: flex;
+            gap: 60px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: gold;
+        }
+        .hero-section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-top: 0px;
+            
+        }
+
+        .hero-section .content {
+            color: #fff;
+            max-width: 1200px;
+            width: 100%;
+            
+        }
+
+        .hero-section .content h1 {
+            font-size: 2.5rem; 
+            max-width: 600px;
+            margin-left:100px;
+        }
+
+        .hero-section .content p {
+            font-weight: 300;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left:100px;
+        }
+
+        .hero-section .content button {
+            background: #fff;
+            color: black; 
+            outline: none;
+            border: none;
+            font-size: 30px;
+            font-weight: 500;
+            margin-top: 40px;
+            padding: 12px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left:100px;
+        }
+
+        .hero-section .content button:hover {
+            color: #fff;
+            background: gold;
+        }
+
+
+        
+
+        footer {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            text-align: center;
+            font-size: medium;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .footer-section .logo{
+            margin-left:100px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer-section a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-section hr{
+            width: 50%;
+        }
+
+
+
+    </style>   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="../images/inktechlogo.jpg" alt="InkTech Logo"></a>
+            <ul class="menu-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="canon.html">Product</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Effortless Precision, Expert Results: Welcome to INK-TECH.</h1>
+            <p>Your source for high-quality printing solutions.</p>
+            <a href="canon.html"><button>Order Now</button></a>
+        </div>
+        <div class="frame">
+            <img src="../images/frame.png" alt="Printer Image">
+        </div>
+    </section>
+    
+        
+    <br>
+    <br>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo">
+                <br>
+                <br>
+                <br>
+                <img src="../images/inktechlogofooter.png" >
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <hr>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="canon.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section brands">
+                <h3>Partner brands</h3>
+                <hr>
+                <a href="canon.html"><p>Canon</p></a>
+                <a href="hp.html"><p>HP</p></a>
+                <a href="epson.html"><p>Epson</p></a>
+                <a href="brother.html"><p>Brother</p></a>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <hr>
+                <p>123 Printer Street, Inkland</p>
+                <p>+977 986203999</p>
+                <p>info@inktech.com</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" alt="Picture of Facebook Icon" height="30px" width="auto"></a> 
+                <a href="https://www.instagram.com" target="_blank"><img src="../images/instagram.png" height="30px" width="auto"></a>  
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="../images/twitter.png" height="30px" width="auto"></a> 
+                <a href="https://www.whatsapp.com" target="_blank"><img src="../images/whatsapp.png" height="30px" width="auto"></a>
+
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>

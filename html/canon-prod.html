@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body{
+            background-color:  #000000;
+            color: #fff;
+            font-family: inter;
+            line-height: 29px;
+        }
+      .checkout-page{
+        display: flex;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+      }  
+      .left-container{
+        flex:50%;
+      }
+      .right-container{
+        flex:50%;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #181818;
+        padding: 50px;
+        border-radius: 20px;
+      }
+      .main-image{
+        width: 250px;
+        height: 500px;
+        margin-left: 10px;
+      }
+      .small{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .small-images {
+        cursor: pointer;
+        height: auto;
+        opacity: 0.5;
+        border-radius: 20px;
+        background-color: rgb(23, 23, 23);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 10px;
+      }
+      
+       h2{
+        font-family: dosis;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+      .stock-code{
+        margin-bottom: 40px;
+        color: rgb(210, 44, 44);
+        font-size: 14px;
+      }
+      .product-code{
+        margin-left: 20px;
+      }
+      .printer-description{
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        width: 500px;
+        font-family: inter;
+      }
+      .printer-price{
+        font-size: 25px;
+        margin-top: 20px;
+      }
+      .cartbutton1{
+        background-color: #bd1d1d; 
+        height: 50px;
+        width: 250px;
+        flex: 1;
+        margin-right: 10px;
+        font-size: 15px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .cartbutton1:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .rating{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .cart-buynow{
+        margin-top:50px ;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .buy-now{
+        width: 250px;
+        height: 50px;
+        flex: 1;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out;
+      }
+      .buy-now:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .last-nav{
+        position: sticky;
+        z-index: 3;
+        top:0px;
+        background-color: #090909;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid gray;
+        height: 90px;
+        margin-bottom: 20px;
+      }
+      .last-nav a{
+        text-decoration: none;
+        color: azure;
+        
+      }
+      .last-nav ul{
+        list-style-type: none;
+        padding: 30px;
+      }
+      .last-nav li{
+        margin: 30px;
+        display: inline;
+        align-items: start;
+      }
+      #overview h2{
+        font-family: dosis;
+        font-size: 24px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 40px;
+      }
+      #overview{
+        border-bottom:1px solid gray ;
+        padding-top: 120px;
+      }
+      .case{
+        margin: 50px;
+      }
+      #specification{
+        margin: 40px;
+      }
+      #specification h2{
+        text-align: center;
+        font-family: dosis;
+        margin: 30px;
+        padding-top: 90px;
+      }
+      table{
+        width: 100%;
+      }
+      td{
+        border-bottom: 0.1px solid rgb(61, 60, 60);
+        padding: 20px;
+        padding-right: 170px;
+      }
+      tr:nth-child(even){
+        background-color: rgb(35, 35, 35);
+      }
+      tr:nth-child(odd){
+        background-color: #171717;
+      }
+      #shipping{
+        display: flex;
+      }
+      .purchase-details{
+        flex:50%
+      }
+      .return{
+        flex:50%;
+      }
+      .benefits{
+        margin-top: 60px;
+        padding-bottom: 50px;
+      }
+      .benefits h2{
+        margin-bottom: 40px;
+      }
+      .box{
+        display: flex;
+        flex-direction: row;
+        margin-top: 200px;
+        margin-bottom: 40px;
+      }
+      .boximg{
+        flex: 50%;
+      }
+      .boxdescrip{
+        flex:50%;
+      }
+      .boxdescrip1{
+        margin-bottom: 60px;
+      }
+      .boxdescrip2 p{
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+      }
+      .relatedProd{
+        display: flex;
+        margin-top: 80px;
+      }
+      .product{
+        width: 350px;
+        height: auto;
+        line-height: 20px;
+      }
+      .delivery-return{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 60px;
+      }
+      #delivery{
+        padding-top: 150px;
+      }
+      .Delivery{
+        flex: 50%;
+      }
+      .return{
+        flex: 50%;
+      }
+      .product{
+        width: 680px;
+        height: 690px;
+        transition: transform 0.2s ease-in-out;
+        padding:0px 20px 40px 40px; /*top right bottom left */
+        margin: 20px;
+        display: block;
+        background-color: #0f0e0e;
+      }
+      .printer_description{
+        margin-bottom: 40px;
+        width:390px;
+      }
+      .product h2{
+        margin-bottom: 50px;
+        margin-top: 0px;
+      }
+      footer {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            text-align: center;
+            font-size: medium;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .footer-section .logo{
+            margin-left:100px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer-section a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-section hr{
+            width: 50%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+
+
+</head>
+
+<body>
+  <script>
+    function myfunction(smallimg){
+    var fullimg=document.getElementById('main');
+        fullimg.src = smallimg.src;
+    }
+  </script>
+  <script src="../jav.js"></script>
+    <nav class="navigation"><!--creating a navigation bar using a sematic tag nav-->
+        <div class="left_section"> <img src="../images/c-logo.jpeg" width="180px"></div><!--creating a section for company's logo-->
+        <ul class="navbar"><!--creating a list of links for navigation bar-->
+          <li><a href="canon.html">Canon</a></li>
+          <li><a href="hp.html" >HP</a></li>
+          <li><a href="epson.html">EPSON</a></li>
+          <li><a href="brother.html">Brother</a></li>
+        </ul>
+        <div class="right_section2"><img src="../images/cart.png" width="30px" height="auto" alt="cart" class="cart-icon"><button class="cartbutton">0</button></div><!--creating a right section fro our search bar and cart option-->
+      </nav>
+    <section class="checkout-page">
+        <div class="left-container">
+            <div class="printer-images">
+              <div class="main-image" >
+                <img src="../images/canon-inkjet4.png" alt="mainimage" width="550px" height="auto" id="main">
+              </div>
+              <div class="small">
+                <div class="small-images">
+                  <img src="../images/canon-inkjet4.png" alt="first-image" width="100px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                  <img src="../images/pixma-g550-fra_gallery_01_0aafdc20021647c7987ca55b2967a3bc (1).webp" width="100px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                
+                <div class="small-images">
+                  <img src="../images/pixma-g550-fsl_gallery_03_5462c952dae64eef9695e8c2a7166fd9.webp" alt="first-image" width="100px" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                <img src="../images/pixma-g550-fsl_gallery_04_a0dd93d50cfb4cf896f4c2c8572849fa.webp" alt="first-image" width="100px" class="small-images1" onclick="myfunction(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+            <div class="description">
+                <h2>Canon PIXMA G550 Printer</h2>
+                <div class="stock-code">
+                <span class="stock" >&#10003 In stock</span>
+                <span class="product-code">Product code: sa2111013068902160</span>
+            </div>
+            <div  class="printer-description">
+                <p>Enjoy easy, wireless high-quality priniting for your office and home through Wi-Fi.perfect for printing large volumes of high-quality borderless photos up to A4 size¹ in a studio, at home or in the office.Total cost of ownership is reduced with this high-volume printer thanks to the six refillable dye-based ink tanks that last-nav longer between refills.</p>
+            </div>
+            <div class="review">
+                <div class="rating">
+                    <span style="color: #ecd553; ">&#9733&#9733&#9733&#9733&#9734</span>
+                    <span>4.0</span>
+                    <span>(25)</span>
+                </div>
+            </div>
+                <div class="printer-price">
+                    <span>Rs 33500</span>
+                    <del style="font-size: 19px; margin-left: 5px; color: rgb(102, 104, 105);">35000</del>
+            </div>
+            <div class="cart-buynow">
+              <button class="cartbutton1" onclick="cartquantity()"><b>Add to Cart</b></button>
+              <button class="buy-now"><b>Buy Now</b></button>
+                
+            </div>
+        </div>
+    </section>     
+ <div class="last-nav">
+        <ul>
+            <li><a href="#overview">OVERVIEW</a></li>
+            <li><a href="#specification">SPECIFICATIONS</a></li>
+            <li><a href="#delivery">DELIVERY OPTIONS</li>
+            <li><a href="#similarproducts">SIMILAR PRODUCTS</a></li>
+        </ul>
+    </div>
+    <div class="case">
+    <div id="overview">
+      <h2>High volume, high standards, low costs</h2>
+        <p>Printing copious amounts of excellent borderless images up to A4 size2 at a studio, at home, or at the workplace is made easy with the Canon PIXMA G550. With six refillable dye-based ink tanks that last longer between refills, this high-volume printer has a lower total cost of ownership. The non-squeeze bottles with mechanical ID ensure a mess-free and error-free ink replacement method when the time comes. The maintenance cartridge is also easy to replace at home or in the studio, which reduces downtime on busy days. You'll save time since you can print from your phone or tablet using the Canon PRINT App, Mopria, or AirPrint, or connect over Wi-Fi to your device.</p>
+        <div>
+          <p>Get easy printing and scanning from your mobile device, with canon Smart – best-in-class mobile print app.[3,4] Eliminate steps in repetitive tasks with customizable shortcuts, 
+            with Smart Tasks in canon Smart app. Scan to the cloud, email, and more – in just a tap.[3] Organize documents 50% faster with Smart Tasks[5] – first mobile print app that automates scanning tasks.[6] 
+            Get notifications when printing, scanning, or copying from your mobile device, using canon Smart app</p>
+          </div>
+        <div class="benefits">
+          <h2>Benefits</h2>
+          <ul>
+              <li>Enhanced color gamut with additional red and grey inks for accurate and vibrant color results.</li>
+              <li>Print high-quality borderless photos up to A4 size.</li>
+              <li>Easy and convenient wireless printing through Wi-Fi, Canon PRINT app, Mopria, or AirPrint.</li>
+              <li>Minimize downtime in busy studio or business environments with a user-replaceable maintenance cartridge.</li>
+              <li>High page yield from just one set of ink bottles – print 3,800 4x6” photos from each set.</li>
+              <li>No waiting around with fast photo print speeds – just 47 seconds to print a 4x6” photo.</li>
+              <li>Get creative with different media: this printer is compatible with magnetic, iron-on, restickable, and matte paper.</li>
+              <li>Rear-feed capacity for up to 100 sheets at a time.</li>
+              <li>Easy to use, the 2-line LCD allows users to access information and adjust settings effortlessly, while automatic power off saves energy.</li>
+              <li>Compatible with Windows, Chrome OS, and Mac OS.</li>
+          </ul>
+      </div>
+    </div>
+    </div>
+    <div id="specification">
+      <h2>SPECIFICATIONS</h2>
+     
+      <table>
+        <tr>
+          <td>Function</td>
+          <td>photo printer</td>
+        </tr>
+        <tr>
+          <td>Features</td>
+          <td>AirPrint3, Borderless Printing13, CD/DVD Printing, Document Printing, Full HD Movie Print9, Special Filters, Grayscale Printing, Photo Printing, PIXMA Printing Solutions11, Quiet Mode, Wireless PictBridge12, Wireless Printing2, 6-Color Ink System with Gray Ink, Rated EPEAT Silver, Auto Power On, Auto Power Offr</td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Black</td>
+          <td>7.7 pages_per_minute</td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Colour</td>
+          <td>4 pages_per_minute</td>
+        </tr>
+        <tr>
+          <td>MaxPrint Resolution</td>
+          <td>4800 x 1200 dots_per_inch</td>
+        </tr>
+        <tr>
+          <td>OS Compatibility</td>
+          <td>Windows® 8, Windows 8.1, Windows 7, Windows 7 SP1,14
+            Windows Vista SP1, Vista SP2, Windows XP SP3 32-bit14
+            Mac OS® X v10.6.8 - v10.914Mobile Operating Systems: iOS, Android, Windows RT</td>
+        </tr>
+        <tr>
+          <td>Ink Cartridge Included</td>
+          <td> PG-745S (Black) 100 pages & CL-746S (Color) 100 pages</td>
+        </tr>
+        <tr>
+          <td>Product Dimensions</td>
+          <td>42.6 x 25.5 x 13.1 cm</td>
+        </tr>
+        <tr>
+          <td>Item Weight</td>
+          <td>2.5kg</td>
+        </tr>
+        
+      </table>
+    </div>
+    <div class="box">
+      <div class="boximg">
+        <img src="../images/box.png">
+      </div>
+      <div class="boxdescrip">
+        <div class="boxdescrip1">
+        <h2>What’s in the box</h2>
+        <span>All you need to start producing great-quality prints at high volume</span>
+      </div>
+        <div>
+          <div class="boxdescrip2">
+          <p>Single function refillable ink tank printer – PIXMA G550</p>
+          <p>6 high-yield dye-based ink bottles (1 x Bk/C/M/Y/R/GY)</p>
+          <p>Power cord</p>
+          <p>Setup CD-ROM</p>
+          <p>Manuals and other documents</p>
+        </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div id="delivery">
+
+    <h2 style="text-align: center;">DELIVERY AND RETURNS</h2>
+    <div class="delivery-return">
+    
+      
+    <div class="Delivery">
+                <h2>Delivery</h2>
+                <h3>Free standard delivery on all orders of £ 30.00 and above</h3>
+                <p>Our online store remains open and deliveries are still being made as normal.</p>
+                <p>Free standard delivery on all orders of £ 30.00 and more. Delivery within 1-3 working days.</p>
+                <p>Orders below £ 30.00 are subject to a delivery charge of £ 3.99.</p>
+    </div>
+                
+            
+            <div class="return">
+                <h2>Return</h2>
+                <p>You have 30 days in which to return your item(s) for free and receive a full refund. Terms & conditions apply.</p>
+
+                 <p>Please note we are unable to refund (unless faulty or not as described) opened ink jet and laser cartridges.</p>
+                
+            </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <div id="similarproducts">
+    <h2 style="text-align: center;">Related Products</h2>
+    <div class="relatedProd">
+    <div class="product" style="margin-left: 40px;">
+      <div><img class="image" src="../images/canon-laser3.png" width="300px"></div>
+      <h2>imageCLASS LBP248x</h2>
+        <div class="printer_description">
+          <ul >
+            <li>Print Speed (A4): Up to 40 Pages per minute</li>
+            <li>First Print Out Time (A4): Approx. 5.0s</li>
+            <li>Print Resolution: Up to 1,200 x 1,200 dpi </li>
+          </ul>
+        </div>
+        <span class="price">Rs. 96,600</span>
+       <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+    
+    </div>
+    <div class="product">
+      <div><img class="image" src="../images/canon-inkjet1.png" width="300px" ></div>
+      <h2>PIXMA iX6870</h2>
+        <div class="printer_description">
+          <ul >
+            <li>5-Ink Color Inkjet Printer</li>
+            <li>Photo Speed (10.16 x 15.24cm): 36s </li>
+            <li>Sheet feed, roll feed, automatic horizontal cutter</li>
+           
+          </ul>
+        </div>
+        <span class="price">Rs. 37,258</span>
+     
+       <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button></div>
+    <div class="product">
+      <div><img class="image" src="../images/canon-inkjet2.png" width="300px" ></div>
+      <h2>PIXMA MG2570S </h2>
+        <div class="printer_description">
+          <ul >
+            <li>Colour inkjet printer, copier and scanner</li>
+            <li>Compliant with Class B requirements, including: USA (FCC rules) </li>
+            <li>Auto duplex printing</li>
+          </ul>
+        </div>
+        <span class="price">Rs. 6,232</span>
+     
+       <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-section logo">
+          <br>
+          <br>
+          <br>
+          <img src="../images/inktechlogofooter.png" >
+      </div>
+      <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <hr>
+          <ul>
+              <li><a href="ronik.html">Home</a></li>
+              <li><a href="canon.html">Product</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="#">About us</a></li>
+          </ul>
+      </div>
+      <div class="footer-section brands">
+          <h3>Partner brands</h3>
+          <hr>
+          <a href="canon.html"><p>Canon</p></a>
+          <a href="hp.html"><p>HP</p></a>
+          <a href="epson.html"><p>Epson</p></a>
+          <a href="brother.html"><p>Brother</p></a>
+      </div>
+      <div class="footer-section contact">
+          <h3>Contact</h3>
+          <hr>
+          <p>123 Printer Street, Inkland</p>
+          <p>+977 986203999</p>
+          <p>info@inktech.com</p>
+          <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.png" height="30px" width="auto"></a> 
+          <a href="https://www.instagram.com" target="_blank"><img src="../images/instagram.png" height="30px" width="auto"></a>  
+          <a href="https://twitter.com/?lang=en" target="_blank"><img src="../images/twitter.png" height="30px" width="auto"></a> 
+          <a href="https://www.whatsapp.com" target="_blank"><img src="../images/whatsapp.png" height="30px" width="auto"></a>
+
+      </div>
+      
+  </div>
+</footer>
+</body>
+</html>

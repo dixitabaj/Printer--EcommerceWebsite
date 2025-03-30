@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body{
+            background-color:  #000000;
+            color: #fff;
+            font-family: inter;
+            line-height: 29px;
+        }
+      .checkout-page{
+        display: flex;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+      }  
+      .left-container{
+        flex:50%;
+      }
+      .right-container{
+        flex:50%;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #181818;
+        padding: 50px;
+        border-radius: 20px;
+      }
+      .main-image{
+        width: 250px;
+        height: 500px;
+        margin-left: 10px;
+      }
+      .small{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .small-images {
+        cursor: pointer;
+        height: auto;
+        opacity: 0.5;
+        border-radius: 20px;
+        background-color: rgb(23, 23, 23);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 10px;
+      }
+       h2{
+        font-family: dosis;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+      .stock-code{
+        margin-bottom: 40px;
+        color: rgb(210, 44, 44);
+        font-size: 14px;
+      }
+      .product-code{
+        margin-left: 20px;
+      }
+      .printer-description{
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        width: 500px;
+        font-family: inter;
+      }
+      .printer-price{
+        font-size: 25px;
+        margin-top: 20px;
+      }
+      .cartbutton1{
+        background-color: #bd1d1d; 
+        height: 50px;
+        width: 250px;
+        flex: 1;
+        margin-right: 10px;
+        font-size: 15px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .cartbutton1:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .rating{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .cart-buynow{
+        margin-top:50px ;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .buy-now{
+        width: 250px;
+        height: 50px;
+        flex: 1;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out;
+      }
+      .buy-now:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .last-nav{
+        position: sticky;
+        z-index: 3;
+        top:0px;
+        background-color: #090909;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid gray;
+        height: 90px;
+        margin-bottom: 20px;
+      }
+      .last-nav a{
+        text-decoration: none;
+        color: azure;
+        
+      }
+      .last-nav ul{
+        list-style-type: none;
+        padding: 30px;
+      }
+      .last-nav li{
+        margin: 30px;
+        display: inline;
+        align-items: start;
+      }
+      #overview h2{
+        font-family: dosis;
+        font-size: 24px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 40px;
+      }
+      #overview{
+        border-bottom:1px solid gray ;
+        padding-top: 120px;
+      }
+      .case{
+        margin: 50px;
+      }
+      #specification{
+        margin: 40px;
+      }
+      #specification h2{
+        text-align: center;
+        font-family: dosis;
+        margin: 30px;
+        padding-top: 90px;
+      }
+      table{
+        width: 100%;
+      }
+      td{
+        border-bottom: 0.1px solid rgb(61, 60, 60);
+        padding: 20px;
+        padding-right: 170px;
+      }
+      tr:nth-child(even){
+        background-color: rgb(35, 35, 35);
+      }
+      tr:nth-child(odd){
+        background-color: #171717;
+      }
+      #shipping{
+        display: flex;
+      }
+      .purchase-details{
+        flex:50%
+      }
+      .return{
+        flex:50%;
+      }
+      .benefits{
+        margin-top: 60px;
+        padding-bottom: 50px;
+      }
+      .benefits h2{
+        margin-bottom: 40px;
+      }
+      .box{
+        display: flex;
+        flex-direction: row;
+        margin-top: 200px;
+        margin-bottom: 40px;
+      }
+      .boximg{
+        flex: 50%;
+      }
+      .boxdescrip{
+        flex:50%;
+      }
+      .boxdescrip1{
+        margin-bottom: 60px;
+      }
+      .boxdescrip2 p{
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+      }
+      .relatedProd{
+        display: flex;
+        margin-top: 80px;
+      }
+      .product{
+        width: 350px;
+        height: auto;
+        line-height: 20px;
+      }
+      .delivery-return{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 60px;
+      }
+      #delivery{
+        padding-top: 150px;
+      }
+      .Delivery{
+        flex: 50%;
+      }
+      .return{
+        flex: 50%;
+      }
+      .product{
+        width: 680px;
+        height: 690px;
+        transition: transform 0.2s ease-in-out;
+        padding:0px 20px 40px 40px; /*top right bottom left */
+        margin: 20px;
+        display: block;
+        background-color: #0f0e0e;
+      }
+      .printer_description{
+        margin-bottom: 40px;
+        width:390px;
+      }
+      .product h2{
+        margin-bottom: 50px;
+        margin-top: 0px;
+      }
+    </style>
+    <!-- linkikng google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+</head>
+<body>
+  <script>
+    function myfunction(smallimg){
+    var fullimg=document.getElementById('main');
+        fullimg.src = smallimg.src;
+    }
+</script>
+  <script src="../jav.js"></script>
+<!-- creating a navigation bar -->
+    <nav class="navigation">
+        <div class="left_section"> <img src="../images/c-logo.jpeg" width="180px" alt="InkTech Logo"></div>
+        <ul class="navbar">
+          <li><a href="canon.html">Canon</a></li>
+          <li><a href="hp.html" >HP</a></li>
+          <li><a href="epson.html">EPSON</a></li>
+          <li><a href="brother.html">Brother</a></li>
+        </ul>
+    </div>
+    <div class="cart-nav">
+      <img src="../images/cart.png" width="30px" height="auto" class="cart-icon">
+      <button class="cartbutton" >0</button>
+    </div>
+      </nav>
+<!-- creating a section for the checkout page -->
+    <section class="checkout-page">
+        <div class="left-container">
+            <div class="printer-images">
+              <div class="main-image" >
+                <img src="../images/epson-laser.png" alt="mainimage" width="550px" height="auto" id="main">
+              </div>
+              <div class="small">
+                <div class="small-images">
+                  <img src="../images/epson-laser.png" alt="first-image" width="120px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                  <img src="../images/Expression_Photo_XP-8700_Wireless_All-in-One_Printer(1).png" alt="first-image" width="120px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                
+                <div class="small-images">
+                  <img src="../images/image-removebg-preview (11).png" alt="first-image" width="120px" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                <img src="../images/Expression_Photo_XP-8700_Wireless_All-in-One_Printer__2_-removebg-preview.png" alt="first-image" width="120px" class="small-images1" onclick="myfunction(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+            <div class="description">
+                <div class="description">
+                    <h2>Expression Photo XP-8700 Wireless All-in-One Printer</h2>
+                    <div class="stock-code">
+                    <span class="stock">&#10003 In stock</span>
+                    <span class="product-code">Product code: XP-8700</span>
+                </div>
+            <div class="printer-description">
+                <p>Easily print professional-quality photos at home with the Expression 
+                    Photo XP-8700 printer. Featuring brilliant, 6-color Claria® Photo HD 
+                    inks paired with Epson’s precise MicroPiezo® technology, this innovative 
+                    all-in-one delivers vibrant borderless prints up to 8.5" x 11" with astounding 
+                    detail and accuracy. 
+                </p>
+            </div>
+            <div class="review">
+                <div class="rating">
+                    <span style="color: #ecd553; ">&#9733&#9733&#9733&#9733&#9734</span>
+                    <span>4.0</span>
+                    <span>(95)</span>
+                </div>
+            </div>
+                <div class="printer-price">
+                    <span>Rs 28000</span>
+                    <del style="font-size: 19px; margin-left: 5px; color: #959494;">29,990</del>
+            </div>
+            <div class="cart-buynow">
+                <button class="cartbutton1" onclick="cartquantity()"><b>Add to Cart</b></button>
+              <button class="buy-now"><b>Buy Now</b></button>
+                
+            </div>
+        </div>
+    </section>     
+    <!-- creating a second navigation bar  -->
+ <div class="last-nav">
+        <ul>
+            <li><a href="#overview">OVERVIEW</a></li>
+            <li><a href="#specification">SPECIFICATIONS</a></li>
+            <li><a href="#delivery">DELIVERY OPTIONS</li>
+            <li><a href="#similarproducts">SIMILAR PRODUCTS</a></li>
+        </ul>
+    </div>
+    <div class="case">
+    <div id="overview">
+      <h2>Print and Scan from Smart Device</h2>
+        <p>Designed for convenience, the XP-8700 offers a large, 4.3" color touchscreen 
+            for intuitive setup and navigation, a built-in scanner and copier, and separate 
+            trays for photo and specialty papers. Ideal for creative enthusiasts, this 
+            solution maximizes productivity with fast wireless printing and includes the 
+            Epson Smart Panel® App1 for easy printing from laptops and smart devices2.Separate trays for plain paper and photo paper; plus, a rear feed for specialty paper; compatible with a wide range of media, including select Epson® fine art papers.</p>
+            <p>
+                Brilliantly visualize your ideas and create a wide range of prints, from the most intricate photograph 
+                    to the most precise architectural drawing.Print documents and photos wirelessly from across the room or around the world using your iPad®, iPhone®, tablet, smartphone or computer. Our free solutions make it easier to print the way you want.
+            </p>
+        <div class="benefits">
+          <h2>Benefits</h2>
+          <ul>
+            <li>Efficient Printing Accomodating as per your Needs</li>
+            <li>2-Sided Printing & Auto Document Feeder</li>
+              <li>Automatic duplex (2-sided) printing helps save on paper costs and toner save mode helps save on toner costs.</li>
+              <li>High page yield from just one set of ink bottles – print 3,800 4x6” photos from each set.</li>
+              <li>No waiting around with fast photo print speeds – just 47 seconds to print a 4x6” photo.</li>
+              <li>Two-sided (duplex) printing is set at default for automatic savings.[7]</li>
+        <li>Help reduce wasted paper and toner by only printing jobs that are truly needed, using Secure Print.[8]</li>
+        <li>Convenient mobile device printing and scanning.</li>
+          </ul>
+      </div>
+    </div>
+    </div>
+    <div id="specification">
+      <h2>SPECIFICATIONS</h2>
+     
+      <table>
+        <tr>
+          <td>Function</td>
+          <td>Fax, Print, Scan, Copy</td>
+        </tr>
+        <tr>
+          <td>Features</td>
+          <td>Designed for convenient use, the XP-8700 features a 4.3" color touchscreen for intuitive setup and navigation. 
+          </td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Black</td>
+          <td>Up to 30 pages per minute</td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Colour</td>
+          <td>Up to 39 pages per minute</td>
+        </tr>
+        <tr>
+          <td>MaxPrint Resolution</td>
+          <td>5 x 7", 4 x 6", 3.5 x 5", 16:9 wide (4 x 7.1"), A6</td>
+        </tr>
+        <tr>
+          <td>OS Compatibility</td>
+          <td>Windows XP Home, Windows XP Professional, Windows XP Professional x64 Edition, Windows Vista, , Windows 7, Windows 8, Windows 8.1, Windows Server2003, Windows Server2003 x64 Edition, Windows Server2008, Windows Server2008 R2</td>
+        </tr>
+        <tr>
+          <td>Ink Cartridge Included</td>
+          <td> PG-745S (Black) 100 pages & CL-746S (Color) 100 pages</td>
+        </tr>
+        <tr>
+          <td>Product Dimensions</td>
+          <td>410 mm x 398.5 mm x 318.5 mm</td>
+        </tr>
+        <tr>
+          <td>Item Weight</td>
+          <td>15 pounds</td>
+        </tr>
+        
+      </table>
+    </div>
+    <div class="box">
+      <div class="boximg">
+        <img src="../images/box.png">
+      </div>
+      <div class="boxdescrip">
+        <div class="boxdescrip1">
+        <h2>What’s in the box</h2>
+        <span>All you need to start producing great-quality prints at high volume</span>
+      </div>
+        <div>
+          <div class="boxdescrip2">
+          <p>Expression Photo XP-8700 Wireless All-in-One Printer</p>
+          <p>CD-ROM for product setup</p>
+          <p>Power cord</p>
+          <p>Black Claria Photo HD Ink Cartridge, Cyan Claria Photo HD Ink Cartridge, 
+            Magenta Claria Photo HD Ink Cartridge, 
+            Yellow Claria Photo HD Ink Cartridge, 
+            Light Cyan Claria Photo HD Ink Cartridge</p>
+          <p>Getting started Guide</p>
+        </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div id="delivery">
+
+    <h2>DELIVERY AND RETURNS</h2>
+    <div class="delivery-return">
+    
+      
+    <div class="Delivery">
+                <h2>Delivery</h2>
+                <h3>Free standard delivery on all orders of Rs. 30,000 and above</h3>
+                <p>Our online store remains open and deliveries are still being made as normal.</p>
+                <p>Free standard delivery on all orders of Rs 30,000 and more. Delivery within 1-3 working days.</p>
+                <p>Orders below Rs 30,000 are subject to a delivery charge of Rs. 399.</p>
+    </div>
+            
+            <div class="return">
+                <h2>Return</h2>
+                <p>You have 30 days in which to return your item(s) for free and receive a full refund. Terms & conditions apply.</p>
+
+                 <p>Please note we are unable to refund (unless faulty or not as described) opened ink jet and laser cartridges.</p>
+            </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <div id="similarproducts">
+    <h2>Related Products</h2>
+    <div class="relatedProd">
+      <div class="product">
+        <div><img class="image" src="../images/epson-laser3.png" >
+      </div>
+        <h2>Photo XP-970 Printer</h2>
+          <div class="printer_description">
+            <ul >
+              <li>Superior photo quality with 5-color inks</li>
+                <li>Automatic duplex printing</li>
+                <li>Low cost printing per page </li>
+                <li>Blazing fast speeds for professional quality black & white prints</li>
+            </ul>
+          </div>
+          <span class="price">Rs. 36,600</span>
+       
+         <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+        </div>
+      
+            <div class="product">
+              <div><img class="image" src="../images/epson-laser4.png" >
+            </div>
+            <div class="nd">
+              <h2>Photo HD XP-15000 Printer</h2>
+                <div class="printer_description">
+                  <ul >
+                    <li>offer a wide color gamut and enhanced black-and-white photo printing.</li>
+                    <li>printing stacks of documents is a breeze</li>
+                    <li>Automatic duplex printing</li>
+                    <li>auto 2-sided printing, a 200-sheet front tray and convenient wireless connectivity </li>
+                 </ul>
+                </div>
+                <span class="price">Rs. 30,000</span>
+               <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+            </div>
+            </div>
+              <div class="product">
+                <div><img class="image" src="../images/epson-inkjet.png" >
+                </div>
+                <h2>Premium XP-6100 Printer</h2>
+                  <div class="printer_description">
+                    <ul>
+                        <li>Ultra powerful and ultra slim</li>
+                        <li>hassle-free printing,</li>
+                        <li>you can easily print from your iPad®, iPhone®, Android™ tablet or smartphone4 – with or without a router</li>
+                        <li>Designed for convenient</li>
+                    </ul>
+                  </div>
+                  <span class="price">Rs. 25,000</span>
+               
+                 <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+                </div>
+</body>
+</html>

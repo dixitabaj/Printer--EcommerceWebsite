@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body{
+            background-color:  #000000;
+            color: #fff;
+            font-family: inter;
+            line-height: 29px;
+        }
+      .checkout-page{
+        display: flex;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+      }  
+      .left-container{
+        flex:50%;
+      }
+      .right-container{
+        flex:50%;
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: #181818;
+        padding: 50px;
+        border-radius: 20px;
+      }
+      .main-image{
+        width: 250px;
+        height: 500px;
+        margin-left: 10px;
+      }
+      .small{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .small-images {
+        cursor: pointer;
+        height: auto;
+        opacity: 0.5;
+        border-radius: 20px;
+        background-color: rgb(23, 23, 23);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 10px;
+      }
+       h2{
+        font-family: dosis;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
+      .stock-code{
+        margin-bottom: 40px;
+        color: rgb(210, 44, 44);
+        font-size: 14px;
+      }
+      .product-code{
+        margin-left: 20px;
+      }
+      .printer-description{
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        width: 500px;
+        font-family: inter;
+      }
+      .printer-price{
+        font-size: 25px;
+        margin-top: 20px;
+      }
+      .cartbutton1{
+        background-color: #bd1d1d; 
+        height: 50px;
+        width: 250px;
+        flex: 1;
+        margin-right: 10px;
+        font-size: 15px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .cartbutton1:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .rating{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .cart-buynow{
+        margin-top:50px ;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .buy-now{
+        width: 250px;
+        height: 50px;
+        flex: 1;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out;
+      }
+      .buy-now:hover{
+        box-shadow: 5px 5px 50px rgb(62, 62, 62);
+        transform: scale(1.03);
+      }
+      .last-nav{
+        position: sticky;
+        z-index: 3;
+        top:0px;
+        background-color: #090909;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid gray;
+        height: 90px;
+        margin-bottom: 20px;
+      }
+      .last-nav a{
+        text-decoration: none;
+        color: azure;
+        
+      }
+      .last-nav ul{
+        list-style-type: none;
+        padding: 30px;
+      }
+      .last-nav li{
+        margin: 30px;
+        display: inline;
+        align-items: start;
+      }
+      #overview h2{
+        font-family: dosis;
+        font-size: 24px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 40px;
+      }
+      #overview{
+        border-bottom:1px solid gray ;
+        padding-top: 120px;
+      }
+      .case{
+        margin: 50px;
+      }
+      #specification{
+        margin: 40px;
+      }
+      #specification h2{
+        text-align: center;
+        font-family: dosis;
+        margin: 30px;
+        padding-top: 90px;
+      }
+      table{
+        width: 100%;
+      }
+      td{
+        border-bottom: 0.1px solid rgb(61, 60, 60);
+        padding: 20px;
+        padding-right: 170px;
+      }
+      tr:nth-child(even){
+        background-color: rgb(35, 35, 35);
+      }
+      tr:nth-child(odd){
+        background-color: #171717;
+      }
+      #shipping{
+        display: flex;
+      }
+      .purchase-details{
+        flex:50%
+      }
+      .return{
+        flex:50%;
+      }
+      .benefits{
+        margin-top: 60px;
+        padding-bottom: 50px;
+      }
+      .benefits h2{
+        margin-bottom: 40px;
+      }
+      .box{
+        display: flex;
+        flex-direction: row;
+        margin-top: 200px;
+        margin-bottom: 40px;
+      }
+      .boximg{
+        flex: 50%;
+      }
+      .boxdescrip{
+        flex:50%;
+      }
+      .boxdescrip1{
+        margin-bottom: 60px;
+      }
+      .boxdescrip2 p{
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+      }
+      .relatedProd{
+        display: flex;
+        margin-top: 80px;
+      }
+      .product{
+        width: 350px;
+        height: auto;
+        line-height: 20px;
+      }
+      .delivery-return{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 60px;
+      }
+      #delivery{
+        padding-top: 150px;
+      }
+      .Delivery{
+        flex: 50%;
+      }
+      .return{
+        flex: 50%;
+      }
+      .product{
+        width: 680px;
+        height: 690px;
+        transition: transform 0.2s ease-in-out;
+        padding:0px 20px 40px 40px; /*top right bottom left */
+        margin: 20px;
+        display: block;
+        background-color: #0f0e0e;
+      }
+      .printer_description{
+        margin-bottom: 40px;
+        width:390px;
+      }
+      .product h2{
+        margin-bottom: 50px;
+        margin-top: 0px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+
+
+</head>
+
+<body>
+  <script>
+    function myfunction(smallimg){
+    var fullimg=document.getElementById('main');
+        fullimg.src = smallimg.src;
+    }
+</script>
+><script src="../jav.js"></script>
+<!-- creating a navigation bar for printer brands -->
+    <nav class="navigation">
+        <div class="left_section"> <img src="../images/c-logo.jpeg" width="180px" alt="InkTech Logo"></div><!--creating a section for company's logo-->
+        <ul class="navbar"><!--creating a list of links for navigation bar-->
+          <li><a href="canon.html">Canon</a></li>
+          <li><a href="hp.html" >HP</a></li>
+          <li><a href="epson.html">EPSON</a></li>
+          <li><a href="brother.html">Brother</a></li>
+        </ul>
+        <div class="cart-nav">
+          <img src="../images/cart.png" width="30px" height="auto" class="cart-icon">
+          <button class="cartbutton" >0</button>
+        </div><!--creating a right section for our search bar and cart option-->
+      </nav>
+    <section class="checkout-page">
+        <div class="left-container">
+            <div class="printer-images">
+              <div class="main-image" >
+                <img src="../images/c08207530.png" alt="mainimage" width="550px" height="auto" id="main">
+              </div>
+              <div class="small">
+                <div class="small-images">
+                  <img src="../images/c08207530.png" alt="first-image" width="120px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                  <img src="../images/hp-laser.png" alt="first-image" width="120px" height="auto" class="small-images1" onclick="myfunction(this)">
+                </div>
+                
+                <div class="small-images">
+                  <img src="../images/hp-laser1.png" alt="first-image" width="120px" class="small-images1" onclick="myfunction(this)">
+                </div>
+                <div class="small-images">
+                <img src="../images/hp-laser2.png" alt="first-image" width="120px" class="small-images1" onclick="myfunction(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+            <div class="description">
+                <h2>HP Color LaserJet Enterprise MFP M480f</h2>
+                <div class="stock-code">
+                  <span>&#10003 In stock</span>
+                <span class="product-code">Product code: sa211134940902160</span>
+            </div>
+            <div  class="printer-description">
+                <p>HP’s entry-level Enterprise-class Color MFP with speeds up to 28 ppm and strongest security.
+                  HP Office Laser Multifunction Printers are designed for SMBs and small workteams in larger companies, delivering enhanced productivity, simplified workflows and reduced costs.
+                  Periodic firmware updates will maintain the effectiveness of these measures and block cartridges that previously worked. 
+                </p>
+            </div>
+            <div class="review">
+                <div class="rating">
+                    <span style="color: #ecd553; ">&#9733&#9733&#9733&#9733&#9734</span>
+                    <span>4.0</span>
+                    <span>(25)</span>
+                </div>
+            </div>
+                <div class="printer-price">
+                    <span>Rs 91000</span>
+                    <del style="font-size: 19px; margin-left: 5px; color: #959494;">95000</del>
+            </div>
+            <div class="cart-buynow">
+                <button class="cartbutton1" onclick="cartquantity()"><b>Add to Cart</b></button>
+              <button class="buy-now"><b>Buy Now</b></button>
+                
+            </div>
+        </div>
+    </section>  
+    <!-- creating a secondary navigation bar-->
+ <div class="last-nav">
+        <ul>
+            <li><a href="#overview">OVERVIEW</a></li>
+            <li><a href="#specification">SPECIFICATIONS</a></li>
+            <li><a href="#delivery">DELIVERY OPTIONS</li>
+            <li><a href="#similarproducts">SIMILAR PRODUCTS</a></li>
+        </ul>
+    </div>
+    <div class="case">
+    <div id="overview">
+      <h2>Easy to use, simple to manage</h2>
+        <p>Give workgroups what they need to succeed with hundreds of HP and third-party solutions and card reader support. Optimize workflows, reduce steps and errors, and support mobile workers with optional MFP apps that meet your specific business needs. Help ensure the security of confidential information with PIN/Pull printing to retrieve print jobs. Stay connected with an optional accessory for wireless,[6] Bluetooth® Low Energy, and NFC touch-to-print.</p>
+          <p>HP FutureSmart firmware can be updated with the latest features[2] to optimize your investment for years to come. Centralize control of your printing environment with HP Web Jetadmin—and help build business efficiency.[3] Easily enable workflows across your fleet with a consistent user experience and intuitive, tablet-like icons. Set up this MFP fast, and easily manage device settings to help increase efficiency.
+            Get notifications when printing, scanning, or copying from your mobile device, using
+             Smart app</p>
+        <div class="benefits">
+          <h2>Benefits</h2>
+          <ul>
+            <li>Optimize workflows, reduce steps and errors, and support mobile workers with optional MFP apps that meet your specific business needs.</li>
+            <li>Help ensure the security of confidential information with PIN/Pull printing to retrieve print jobs.</li>
+              <li>Minimize downtime in busy studio or business environments with a user-replaceable maintenance cartridge.</li>
+              <li>High page yield from just one set of ink bottles – print 3,800 4x6” photos from each set.</li>
+              <li>No waiting around with fast photo print speeds – just 47 seconds to print a 4x6” photo.</li>
+              <li>Two-sided (duplex) printing is set at default for automatic savings.[7]</li>
+        <li>Help reduce wasted paper and toner by only printing jobs that are truly needed, using HP Secure Print.[8]</li>
+        <li>Save energy without sacrificing performance—this MFP is ENERGY STAR and Blue Angel certified.</li>
+          </ul>
+      </div>
+    </div>
+    </div>
+    <div id="specification">
+      <h2>SPECIFICATIONS</h2>
+     
+      <table>
+        <tr>
+          <td>Function</td>
+          <td>Print, copy, scan, fax</td>
+        </tr>
+        <tr>
+          <td>Features</td>
+          <td>The operating code (BIOS) is automatically checked during startup and repairs itself if compromised. 
+            Firmware is automatically checked during startup to determine if it’s authentic code—digitally signed by HP. The printer’s outgoing network connections are inspected to stop suspicious requests and threat malware
+          </td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Black</td>
+          <td>Up to 29 ppm</td>
+        </tr>
+        <tr>
+          <td>Max Printspeed Colour</td>
+          <td>Up to 29 ppm</td>
+        </tr>
+        <tr>
+          <td>MaxPrint Resolution</td>
+          <td>4800 x 1200 dots_per_inch</td>
+        </tr>
+        <tr>
+          <td>OS Compatibility</td>
+          <td>Windows 11; Windows 10; Windows 8; Windows 8.1; Windows 7; Windows Client OS; Android; iOS; Mobile OS; macOS 10.12 Sierra; macOS 10.13 High Sierra; macOS 10.14 Mojave; macOS 10.15 Catalina</td>
+        </tr>
+        <tr>
+          <td>Ink Cartridge Included</td>
+          <td> PG-745S (Black) 100 pages & CL-746S (Color) 100 pages</td>
+        </tr>
+        <tr>
+          <td>Product Dimensions</td>
+          <td>16.4 x 18.6 x 15.7 in/td>
+        </tr>
+        <tr>
+          <td>Item Weight</td>
+          <td>51.2 lbs</td>
+        </tr>
+        
+      </table>
+    </div>
+    <div class="box">
+      <div class="boximg">
+        <img src="../images/box.png">
+      </div>
+      <div class="boxdescrip">
+        <div class="boxdescrip1">
+        <h2>What’s in the box</h2>
+        <span>All you need to start producing great-quality prints at high volume</span>
+      </div>
+        <div>
+          <div class="boxdescrip2">
+          <p>HP Color LaserJet Enterprise MFP M480f</p>
+          <p>HP Black Original LaserJet Toner Cartridge</p>
+          <p>Power cord</p>
+          <p>HP Cyan, Magenta, Yellow Original LaserJet Toner Cartridges (~2,100 pages each)</p>
+          <p>Getting started Guide</p>
+        </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div id="delivery">
+
+    <h2>DELIVERY AND RETURNS</h2>
+    <div class="delivery-return">
+    
+      
+    <div class="Delivery">
+                <h2>Delivery</h2>
+                <h3>Free standard delivery on all orders of Rs. 30,000 and above</h3>
+                <p>Our online store remains open and deliveries are still being made as normal.</p>
+                <p>Free standard delivery on all orders of Rs 30,000 and more. Delivery within 1-3 working days.</p>
+                <p>Orders below Rs 30,000 are subject to a delivery charge of Rs. 399.</p>
+    </div>
+            
+            <div class="return">
+                <h2>Return</h2>
+                <p>You have 30 days in which to return your item(s) for free and receive a full refund. Terms & conditions apply.</p>
+
+                 <p>Please note we are unable to refund (unless faulty or not as described) opened ink jet and laser cartridges.</p>
+            </div>
+    </div>
+  </div>
+  </div>
+</div>
+  <div id="similarproducts">
+    <h2>Related Products</h2>
+    <div class="relatedProd">
+      <div class="product" >
+        <div><img class="image" src="../images/c06326790.png" >
+      </div>
+        <h2>HP LaserJet Enterprise M507x</h2>
+          <div class="printer_description">
+            <ul >
+              <li>Print only</li>
+              <li>Print speed letter: Up to 45 ppm (black)</li>
+              <li>Auto duplex printing; 3 paper trays (standard); </li>
+              <li>security enabled printer</li>
+              <li>Smart app; Auto duplex printing; 250 sheet paper tray (standard);</li>
+            </ul>
+          </div>
+          <span class="price">Rs. 45,000</span>
+       
+         <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+        </div>
+      <div class="product" >
+        <div><img class="image" src="../images/c08180947.png" >
+      </div>
+        <h2>LaserJet Pro 4001dn Printer</h2>
+          <div class="printer_description">
+            <ul >
+              <li>Print, auto 2-sided printing and ethernet & USB connectivity</li>
+              <li>Blazing fast speeds for professional quality black & white prints</li>
+              <li>DHP Wolf Pro security settings</li>
+              <li>Dynamic security enabled printer</li>
+            </ul>
+          </div>
+          <span class="price">Rs. 89,000</span>
+       
+         <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+        </div>
+      
+            <div class="product">
+              <div><img class="image" src="../images/c04997973.png" ></div>
+              <h2>HP LaserJet Enterprise M406dn</h2>
+                <div class="printer_description">
+                  <ul >
+                    <li>Print speed letter: Up to 42 ppm (HP high speed mode) black</li>
+                    <li>The world's most secure printing</li>
+                    <li>Dynamic security enabled printer</li>
+                    <li>Auto duplex printing; 2 paper trays (standard); 2.7 inch color graphics display</li>
+                  </ul>
+                </div>
+                <span class="price">Rs. 31,000</span>
+               <button class="cart" onclick="cartquantity()"><b>Add to cart</b></button>
+              </div>
+</div>
+
+</body>
+</html>
